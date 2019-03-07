@@ -7,13 +7,14 @@
 
   body {
     background: url(../background.jpg) no-repeat fixed; 
-    background-size: 800px 675px;
+    background-size: 800px 579px;
   }
 
   ul,
   a {
       text-decoration: none;
       list-style: none;
+
   }
 
   ul {
@@ -29,6 +30,10 @@
         text-align: center;
         font-size: 2em;
         font-family: 'ZCOOL QingKe HuangYou', cursive;
+    }
+
+    .main-nav a {
+        color: black;
     }
 
     .main-nav li {
@@ -70,4 +75,118 @@
 /*=================================================================
  Media Queries
 ===================================================================*/
+
+/* Galaxy S5, i-Phone 6/7/8 */
+@media (min-width: 350px) {
+
+    body {
+        background: url(../background.jpg) no-repeat fixed; 
+        background-size: 850px 750px;
+      }
+
+    .main-nav li {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .main-nav li:first-child {
+        padding-top: 10px;
+    }
+    
+    #fb-icon {
+        font-size: 75px;
+    }
+
+}
+
+/* i-Phone 6/7/8 Plus, Pixel 2 */
+
+@media (min-width: 400px) {
+    body {
+        background: url(../background.jpg) no-repeat fixed; 
+        background-size: 900px 750px;
+      }
+
+    .main-nav li {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .main-nav li:first-child {
+        padding-top: 30px;
+    }
+    
+    #fb-icon {
+        font-size: 75px;
+    }
+}
+
+/* Pixel 2, i-Phone X */
+@media (min-width: 375px) and (min-height:800px) {
+    body {
+        background: url(../background.jpg) no-repeat fixed; 
+        background-size: 990px 900px;
+      }
+
+    .main-nav li {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .main-nav li:first-child {
+        padding-top: 50px;
+    }
+    
+    #fb-icon {
+        font-size: 100px;
+    }
+}
+
+/* i-Pad and other tablets */
+
+@media (min-width: 500px) and (min-height:700px) {
+    body {
+        background: url(../background.jpg) no-repeat fixed; 
+        background-size: 1100px 1100px;
+      }
+
+    .main-nav li {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .main-nav li:first-child {
+        padding-top: 50px;
+    }
+    
+    #fb-icon {
+        font-size: 100px;
+    }
+}
+
+ /* Larger Devices  */
+@media (min-width: 1000px), (min-height:800px) {
+    body {
+        background: url(../background.jpg) no-repeat fixed; 
+        background-size: 1600px 780px;
+      }
+
+    .main-nav li {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-bottom: .5em;
+    }
+
+    .main-nav li:first-child {
+        padding-top: 50px;
+    }
+    
+    #fb-icon {
+        font-size: 100px;
+    }
+
+    #sticky-footer {
+        font-size: 2em;
+    }
+}
 
