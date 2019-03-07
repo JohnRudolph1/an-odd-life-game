@@ -5,10 +5,41 @@
  Element Selectors
 ===================================================================*/
 
+  body {
+    background: url(../background.jpg) no-repeat fixed; 
+    background-size: 800px 675px;
+  }
+
+  ul,
+  a {
+      text-decoration: none;
+      list-style: none;
+  }
+
+  ul {
+      padding: 0;
+  }
+
 /*=================================================================
  Class Selectors
 ===================================================================*/
 
+    .main-nav {
+        display: block;
+        text-align: center;
+        font-size: 2em;
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+    }
+
+    .main-nav li {
+        padding-bottom: 1em;
+    }
+
+    .main-nav li:first-child {
+        padding-top: 20px;
+    }
+
+ 
 /*=================================================================
  ID Selectors
 ===================================================================*/
@@ -16,9 +47,27 @@
     #title {
         display: block;
         text-align: center;
-        font-family:'Caveat', cursive;
+        text-decoration: underline;
+        font-family: 'Laila', serif;
+        padding-top: 14px;  
+    }
+
+    #fb-icon {
+        display: block;
+        text-align: center;
+    }
+
+    #sticky-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: burlywood;
+        color: white;
+        text-align: center;
     }
 
 /*=================================================================
  Media Queries
 ===================================================================*/
+
