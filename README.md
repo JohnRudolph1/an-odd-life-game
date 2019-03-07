@@ -1,4 +1,4 @@
-Welcome to An Odd Life!
+Welcome to An Odd Life!  
 
 A choose-your-path JavaScript game where you encounter some real strange situations, and your decision will progress your story!  
 
