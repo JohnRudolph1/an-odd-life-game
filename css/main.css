@@ -29,7 +29,7 @@
         display: block;
         text-align: center;
         font-size: 2em;
-        font-family: 'ZCOOL QingKe HuangYou', cursive;
+       font-family: 'ZCOOL QingKe HuangYou', cursive;
     }
 
     .main-nav a {
@@ -57,9 +57,11 @@
         padding-top: 14px;  
     }
 
-    #fb-icon {
-        display: block;
-        text-align: center;
+    .fab {
+      
+            display: block;
+            text-align: center;
+        
     }
 
     #sticky-footer {
@@ -86,7 +88,7 @@
 
     .main-nav li {
         font-size: 1.5em;
-        font-weight: bold;
+        
     }
 
     .main-nav li:first-child {
@@ -106,6 +108,8 @@
         background: url(../background.jpg) no-repeat fixed; 
         background-size: 900px 750px;
       }
+
+    
 
     .main-nav li {
         font-size: 1.5em;
@@ -147,7 +151,7 @@
 @media (min-width: 500px) and (min-height:700px) {
     body {
         background: url(../background.jpg) no-repeat fixed; 
-        background-size: 1100px 1100px;
+        background-size: 1100px 1300px;
       }
 
     .main-nav li {
@@ -174,7 +178,7 @@
     .main-nav li {
         font-size: 1.5em;
         font-weight: bold;
-        padding-bottom: .5em;
+        padding-bottom: 1.3em;
     }
 
     .main-nav li:first-child {
