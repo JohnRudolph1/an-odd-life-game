@@ -14,30 +14,61 @@
 <body>
     <header class="header-wrap">
         <h1 id="title" class="display-4">An Odd Life</h1>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" title="Home!">Home!</a></li>
-                <li><a href="about.html"" title="About AP Inc!">About AP Inc!</a></li>
-                <li><a href="contact.html" title="Hit Us Up!">Contact Us!</a></li>
-            </ul>
-        </nav>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" title="Home!">Home!</a></li>
+                    <li><a href="about.html"" title="About AP Inc!">About AP Inc!</a></li>
+                    <li><a href="contact.html" title="Hit Us Up!">Contact Us!</a></li>
+                </ul>
+            </nav>
     </header>
-    <div class="background-color clearfix">
-        <div class="jumbotext">
+    
+    <!-- Weary Questioner -->
+    <div id="jumboText" class="jumbotext">
+        <div id="background-color" class="background-color">
             <h1 class="display-4">Welcome, strange traveler...</h1>
                     <hr class="my-4">
-                <p>It appears you've stumbled upon a button in the midst of the world wide web...dos't thou click'th the tempting Bootstrap component?</p>
-                <p class="lead">
-                    <a id="startButton" class="btn btn-light btn-lg" role="button">Start Your Journey</a>
-                </p>
+                        <p>It appears you've stumbled upon a button in the midst of the world wide web...dos't thou click'th the tempting Bootstrap component?</p>
+                        <p class="lead">
+                        <a id="startButton" class="btn btn-light btn-lg" role="button">Start Your Journey</a>
+                        </p>
         </div>
     </div>
 
+      <!-- DISPLAY ON ALL DIVS SET TO :NONE, REFER TO js/oddlife.js FOR ANIMATIONS -->
+      <!-- DIV WIKI: 
+         q#= question number
+         b#= branch number
+         a#= answer number
+         e#= ending number
+         s#= statement number
+                    -->
     
-           
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <div class="game-wrap">
+        <div id=mb-s1>
+            <div class="jumbotext">
+                <div id="background-color" class="background-color">
+                    <p>You appear in the middle of the woods with no memory of who you are, or for that matter, <em><strong>WHERE</em></strong> you are.  Your clothes are torn, and you have an overwhelming sensation that you've left a stove on in whatever thing it is you reside in.  Hopefully it's something nice like a big house with low payments.  But by the way you're dressed...well a double-wide would be cool too.</p>
+                        <p><a id="continueButtonS1" class="btn btn-light btn-lg" role="button">Continue</a></p>
+                </div>
+            </div>
+        </div>    
+        <div id="mb-q1">
+            <div class="jumbotext">
+                <div id="background-color" class="background-color">
+                    <p>You look around, vision still blurry.  You can make out trees; a lot of them.  In front of you is more trees </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="sticky-footer">Autonomous Productions   |  Est. 1993   |   Louisville KY</div>
+    </footer>
+
+<!-- jquery cdn -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/game.js"></script>
 </body>
 </html>

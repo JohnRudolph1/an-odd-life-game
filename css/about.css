@@ -5,9 +5,9 @@
  Element Selectors
 ===================================================================*/
 
-  body {
+body {
     background: url(../background.jpg) no-repeat fixed; 
-    background-size: 800px 579px;
+    background-size: 800px 700px;
   }
 
   ul,
@@ -29,25 +29,46 @@
         display: block;
         text-align: center;
         font-size: 2em;
-       font-family: 'ZCOOL QingKe HuangYou', cursive;
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        margin-bottom: 5%;
     }
 
-    .main-nav a {
+    .main-nav a{
         color: black;
     }
 
     .main-nav li {
-        padding-bottom: em;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25%;
     }
 
-    .main-nav li:first-child {
-        padding-top: 20px;
+    
+
+    .background-color {
+        background-color: rgba(182, 187, 197, 0.7);
+        border: 2px solid black;
+        margin-bottom: 4%;
     }
 
-    .main-nav li {
-        font-size: 1.5em;
-        
+    .jumbotext {
+        text-align: center;
+        color: black;
+        opacity: auto;
+        }
+
+    .jumbotext p {
+        font-size: 32px;
     }
+
+    .fab {
+      
+        display: block;
+        text-align: center;
+    
+    }   
+
+ 
 /*=================================================================
  ID Selectors
 ===================================================================*/
@@ -59,14 +80,6 @@
         font-family: 'Laila', serif;
         padding-top: 14px;  
     }
-    
-
-    .fab {
-      
-            display: block;
-            text-align: center;
-        
-    }
 
     #sticky-footer {
         position: fixed;
@@ -76,81 +89,33 @@
         background-color: burlywood;
         color: white;
         text-align: center;
+        font-size: 2em;
     }
+
 
 /*=================================================================
  Media Queries
 ===================================================================*/
 
-/* Galaxy S5, i-Phone 6/7/8 */
-@media (min-width: 350px) {
 
-    body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 600px 600px;
-      }
-
-    .main-nav li {
-        font-size: 1.5em;
-        
-    }
-
-    .main-nav li:first-child {
-        padding-top: 10px;
-    }
-    
-    #fb-icon {
-        font-size: 75px;
-    }
-
-}
-
-/* i-Phone 6/7/8 Plus, Pixel 2 */
-
-@media (min-width: 400px) {
-    body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 900px 750px;
-      }
-
-    
-
-    .main-nav li {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .main-nav li:first-child {
-        padding-top: 30px;
-    }
-    
-    #fb-icon {
-        font-size: 75px;
-    }
-}
  /* Larger Devices  */
 @media (min-width: 1000px), (min-height:800px) {
     body {
         background: url(../background.jpg) no-repeat fixed; 
         background-size: 1600px 780px;
       }
-
-    .main-nav li {
-        font-size: 1.5em;
-        font-weight: bold;
-        padding-bottom: 1.3em;
-    }
-
-    .main-nav li:first-child {
-        padding-top: 50px;
-    }
     
-    #fb-icon {
-        font-size: 100px;
+    .main-nav li {
+        display: inline-block;
+        text-align: center;
     }
 
-    #sticky-footer {
-        font-size: 2em;
+    .main-nav li:nth-child(-n+2) {
+        padding-right: 30px;
     }
-}
+
+    .jumbotext {
+        margin: 0% 25% 0% 25%;
+    }
+    }
 

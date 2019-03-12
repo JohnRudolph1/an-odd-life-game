@@ -1,6 +1,11 @@
+/*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$
+ Page Design:
+*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$*$/
+
 /*=================================================================
  MOBILE FIRST APPROACH (320px width, i-Phone 5)
 ===================================================================*/
+
 /*=================================================================
  Element Selectors
 ===================================================================*/
@@ -14,7 +19,6 @@ body {
   a {
       text-decoration: none;
       list-style: none;
-
   }
 
   ul {
@@ -36,10 +40,11 @@ body {
     .main-nav a{
         color: black;
     }
-
+    
     .main-nav li {
         display: flex;
         flex-direction: column;
+        margin-bottom: 2%;
     }
 
     
@@ -60,7 +65,11 @@ body {
         font-size: 32px;
     }
 
-  
+    .jumbotext a {
+        
+    }
+
+    
 
  
 /*=================================================================
@@ -75,6 +84,23 @@ body {
         padding-top: 14px;  
     }
 
+    #sticky-footer {
+        display: none;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: burlywood;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    
+
+    #intro, #mb-s1, #mb-q1 {
+        display: none;
+    }
 
 /*=================================================================
  Media Queries
