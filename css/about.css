@@ -4,15 +4,19 @@
 /*=================================================================
  Element Selectors
 ===================================================================*/
+html,
+body {
+    height: 100%;
+}
 
 body {
-    background-image: url("../background.jpg");
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
+  background-image: url("../background.jpg");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
   ul,
   a {
       text-decoration: none;

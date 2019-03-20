@@ -20,6 +20,7 @@
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   ul,
@@ -94,6 +95,7 @@
         position: fixed;
         left: 0;
         bottom: 0;
+        margin-top: 10%;
         width: 100%;
         background-color: burlywood;
         color: white;
