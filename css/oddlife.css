@@ -9,6 +9,10 @@
 /*=================================================================
  Element Selectors
 ===================================================================*/
+  html,
+  body {
+      height: 100%;
+  }
 
   body {
     background-image: url("../background.jpg");
@@ -99,7 +103,7 @@
 
 
 
-    #intro, #mb-s1, #mb-q1, #b1-q1, #b1-b1-s1, #b1-b1-s2, #b1-b1-q1, #b1-b2-s1, #b1-b3-s1, #b1-b3-s2 {
+    #intro, #mb-s1, #mb-q1, #b1-q1, #b1-b1-s1, #b1-b1-s2, #b1-b1-q1, #b1-b1-b1-s1, #b1-b1-b2-s1, #b1-b1-b2-s2, #b1-b2-s1, #b1-b3-s1 {
         display: none;
     }
 
