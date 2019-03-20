@@ -9,10 +9,15 @@
 /*=================================================================
  Element Selectors
 ===================================================================*/
-
-body {
-    background: url(../background.jpg) no-repeat fixed; 
-    background-size: 800px 579px;
+body, html {
+    height: 100%;
+  }
+  body {
+    background-image: url("../background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   ul,
@@ -29,6 +34,7 @@ body {
  Class Selectors
 ===================================================================*/
 
+
     .main-nav {
         display: block;
         text-align: center;
@@ -42,12 +48,10 @@ body {
     }
     
     .main-nav li {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         margin-bottom: 2%;
     }
-
-    
 
     .background-color {
         background-color: rgba(182, 187, 197, 0.7);
@@ -63,10 +67,8 @@ body {
 
     .jumbotext p {
         font-size: 32px;
-    }
-
-    .jumbotext a {
-        
+        padding-left: 6px;
+        padding-right: 6px;
     }
 
     
@@ -96,7 +98,7 @@ body {
         font-size: 2em;
     }
 
-    
+
 
     #intro, #mb-s1, #mb-q1 {
         display: none;
@@ -110,8 +112,7 @@ body {
  /* Larger Devices  */
 @media (min-width: 1000px), (min-height:800px) {
     body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 1600px 780px;
+
       }
     
     .main-nav li {

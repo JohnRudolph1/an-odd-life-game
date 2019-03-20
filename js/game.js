@@ -1,4 +1,4 @@
-/* Template for progressing story board ******************************************
+/* ************************************ Template for progressing story board ******************************************
 
 
 $('').click(function ({

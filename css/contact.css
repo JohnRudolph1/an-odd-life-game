@@ -6,8 +6,11 @@
 ===================================================================*/
 
 body {
-    background: url(../background.jpg) no-repeat fixed; 
-    background-size: 800px 579px;
+    background-image: url("../background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   ul,

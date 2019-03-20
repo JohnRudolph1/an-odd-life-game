@@ -5,10 +5,16 @@
  Element Selectors
 ===================================================================*/
 
-  body {
-    background: url(../background.jpg) no-repeat fixed; 
-    background-size: 800px 579px;
+body, html {
+    height: 100%;
   }
+body {
+    background-image: url("../background.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
   ul,
   a {
@@ -68,6 +74,7 @@
         
     }
 
+
     #sticky-footer {
         position: fixed;
         left: 0;
@@ -81,76 +88,3 @@
 /*=================================================================
  Media Queries
 ===================================================================*/
-
-/* Galaxy S5, i-Phone 6/7/8 */
-@media (min-width: 350px) {
-
-    body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 600px 600px;
-      }
-
-    .main-nav li {
-        font-size: 1.5em;
-        
-    }
-
-    .main-nav li:first-child {
-        padding-top: 10px;
-    }
-    
-    #fb-icon {
-        font-size: 75px;
-    }
-
-}
-
-/* i-Phone 6/7/8 Plus, Pixel 2 */
-
-@media (min-width: 400px) {
-    body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 900px 750px;
-      }
-
-    
-
-    .main-nav li {
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    .main-nav li:first-child {
-        padding-top: 30px;
-    }
-    
-    #fb-icon {
-        font-size: 75px;
-    }
-}
- /* Larger Devices  */
-@media (min-width: 1000px), (min-height:800px) {
-    body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 1600px 780px;
-      }
-
-    .main-nav li {
-        font-size: 1.5em;
-        font-weight: bold;
-        padding-bottom: 1.3em;
-    }
-
-    .main-nav li:first-child {
-        padding-top: 50px;
-    }
-    
-    #fb-icon {
-        font-size: 100px;
-    }
-
-    #sticky-footer {
-        font-size: 2em;
-    }
-}
-
