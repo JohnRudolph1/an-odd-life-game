@@ -1,10 +1,10 @@
 /* ************************************ Template for progressing story board ******************************************
 
 
-$('').click(function ({
-    $('').slideUp(1000, function (){
-        $('').slideDown(1000, function (){
-            $('').show();
+$('#').click(function (){
+    $('#').slideUp(1000, function (){
+        $('#').slideDown(1000, function (){
+            $('#').show();
         })
     })
 })
@@ -13,6 +13,7 @@ $('').click(function ({
 */
 //---------------------------------------------------------------------------------------------------------------------------------------
 console.log ('Start program');
+
 //Start button
 
 $('#startButton').click(function () {
@@ -24,7 +25,7 @@ $('#startButton').click(function () {
     })
 })
 
-//Question 1:
+//mb-q1
 $('#continueButtonS1').click(function () {
     $('#mb-s1').slideUp(1000, function(){
         $('#mb-q1').slideDown(1000, function(){
@@ -32,3 +33,75 @@ $('#continueButtonS1').click(function () {
         })
     })
 })
+    //b1-q1
+    $('#b1-button').click(function (){
+        $('#mb-q1').slideUp(1000, function (){
+            $('#b1-q1').slideDown(1000, function (){
+                $('#b1-q1').show();
+            })
+        })
+    })
+       //b1-s1
+        $('#b1-q1-button1').click(function (){
+            $('#b1-q1').slideUp(1000, function (){
+                $('#b1-b1-s1').slideDown(1000, function (){
+                    $('#b1-b1-s1').show();
+                })
+            })
+        })
+       //b1-s2
+        $('#b1-b1-continuebutton').click(function (){
+            $('#b1-b1-s1').slideUp(1000, function (){
+                $('#b1-b1-s2').slideDown(1000, function (){
+                    $('#b1-b1-s2').show();
+                })
+            })
+        })
+       //b1-q1
+        $('#b1-b1-continuebutton2').click(function (){
+            $('#b1-b1-s2').slideUp(1000, function (){
+                $('#b1-b1-q1').slideDown(1000, function (){
+                    $('#b1-b1-q1').show();
+                })
+            })
+        })
+       //b1-b2-s1
+        $('#b1-b1-q1-button1').click(function (){
+            $('#b1-b1-q1').slideUp(1000, function (){
+                $('#b1-b2-s1').slideDown(1000, function (){
+                    $('#b1-b2-s1').show();
+                })
+            })
+        })
+       //b1-b3-s1
+       $('#b1-b1-q1-button2').click(function (){
+        $('#b1-b1-q1').slideUp(1000, function (){
+            $('#b1-b3-s1').slideDown(1000, function (){
+                $('#b1-b3-s1').show();
+            })
+        })
+    })
+       //b1-b3-s2
+        $('#b1-b3-s1-continuebutton').click(function (){
+            $('#b1-b3-s1').slideUp(1000, function (){
+                $('#b1-b3-s2').slideDown(1000, function (){
+                    $('#b1-b3-s2').show();
+                })
+            })
+        })
+        //b1-b2-e1
+        $('#restart').click(function (){
+            $('#b1-b2-s1').slideUp(1000, function (){
+                $('#mb-s1').slideDown(1000, function (){
+                    $('#mb-s1').show();
+                })
+            })
+        })
+        //b1-b3-e1
+        $('#restart2').click(function (){
+            $('#b1-b3-s2').slideUp(1000, function (){
+                $('#mb-s1').slideDown(1000, function (){
+                    $('#mb-s1').show();
+                })
+            })
+        })

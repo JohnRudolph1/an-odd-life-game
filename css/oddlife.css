@@ -9,9 +9,7 @@
 /*=================================================================
  Element Selectors
 ===================================================================*/
-body, html {
-    height: 100%;
-  }
+
   body {
     background-image: url("../background.jpg");
     -moz-background-size: cover;
@@ -48,7 +46,7 @@ body, html {
     }
     
     .main-nav li {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         margin-bottom: 2%;
     }
@@ -69,6 +67,7 @@ body, html {
         font-size: 32px;
         padding-left: 6px;
         padding-right: 6px;
+        padding-top: 14px;
     }
 
     
@@ -100,7 +99,7 @@ body, html {
 
 
 
-    #intro, #mb-s1, #mb-q1 {
+    #intro, #mb-s1, #mb-q1, #b1-q1, #b1-b1-s1, #b1-b1-s2, #b1-b1-q1, #b1-b2-s1, #b1-b3-s1, #b1-b3-s2 {
         display: none;
     }
 
@@ -110,10 +109,7 @@ body, html {
 
 
  /* Larger Devices  */
-@media (min-width: 1000px), (min-height:800px) {
-    body {
-
-      }
+@media (min-width: 1000px), (min-height:665px) {
     
     .main-nav li {
         display: inline-block;

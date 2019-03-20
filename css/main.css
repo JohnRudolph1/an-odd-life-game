@@ -43,7 +43,7 @@ body {
     }
 
     .main-nav li {
-        padding-bottom: em;
+        padding-bottom: .5em;
     }
 
     .main-nav li:first-child {
@@ -88,3 +88,11 @@ body {
 /*=================================================================
  Media Queries
 ===================================================================*/
+
+@media (min-width: 1000px), (min-height:665px) {
+
+    .main-nav li {
+        padding-bottom: 1.5em;
+    }
+
+}

@@ -103,10 +103,7 @@ body {
 
  /* Larger Devices  */
 @media (min-width: 1000px), (min-height:800px) {
-    body {
-        background: url(../background.jpg) no-repeat fixed; 
-        background-size: 1600px 780px;
-      }
+
     
     .main-nav li {
         display: inline-block;
