@@ -96,7 +96,8 @@
         padding-bottom: 10px;
     }
 
-    #intro, #mb-s1, #mb-q1, #b1-q1, #b1-b1-s1, #b1-b1-s2, #b1-b1-q1, #b1-b1-b1-s1, #b1-b1-b2-s1, #b1-b1-b2-s2, #b1-b2-s1, #b1-b3-s1 {
+    #intro, #mb-s1, #mb-q1, #b1-q1, #b1-b1-s1, #b1-b1-s2, #b1-b1-q1, #b1-b1-b1-s1, #b1-b1-b2-s1, #b1-b1-b2-s2, #b1-b2-s1, #b1-b3-s1, #b2-q1,
+    #b2-b2-s1, #b2-b2-q1, #b2-b2-b1-s1, #b2-b2-b1-b1-q1 {
         display: none;
     }
 
