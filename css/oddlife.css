@@ -63,13 +63,15 @@
     }
 
     .jumbotext {
+        display: block;
         text-align: center;
         color: black;
-        opacity: auto;
+        padding-bottom: 10%;
         }
 
     .jumbotext p {
-        font-size: 32px;
+        
+        font-size: 26px;
         padding-left: 6px;
         padding-right: 6px;
         padding-top: 14px;
@@ -90,20 +92,9 @@
         padding-top: 14px;  
     }
 
-    #sticky-footer {
-        display: none;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        margin-top: 10%;
-        width: 100%;
-        background-color: burlywood;
-        color: white;
-        text-align: center;
-        font-size: 2em;
+    #endings {
+        padding-bottom: 10px;
     }
-
-
 
     #intro, #mb-s1, #mb-q1, #b1-q1, #b1-b1-s1, #b1-b1-s2, #b1-b1-q1, #b1-b1-b1-s1, #b1-b1-b2-s1, #b1-b1-b2-s2, #b1-b2-s1, #b1-b3-s1 {
         display: none;
@@ -115,7 +106,7 @@
 
 
  /* Larger Devices  */
-@media (min-width: 1000px), (min-height:665px) {
+@media (min-width: 885px), (min-height:665px) {
     
     .main-nav li {
         display: inline-block;
@@ -129,5 +120,9 @@
     .jumbotext {
         margin: 0% 25% 0% 25%;
     }
+
+    .jumbotext p {
+        font-size: 32px;
     }
+}
 

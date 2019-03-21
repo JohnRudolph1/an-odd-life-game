@@ -57,6 +57,15 @@ body {
         font-size: 1.5em;
         
     }
+
+    .fab {
+        position: fixed;
+        text-align: center;
+        width:100px; 
+        left:50%; 
+        margin-left:-50px;
+        bottom: 10%;
+    }   
 /*=================================================================
  ID Selectors
 ===================================================================*/
@@ -69,22 +78,13 @@ body {
         padding-top: 14px;  
     }
     
-
-    .fab {
-      
-            display: block;
-            text-align: center;
-        
-    }
-
-
     #sticky-footer {
         position: fixed;
         left: 0;
         bottom: 0;
         width: 100%;
         background-color: burlywood;
-        color: white;
+        color: black;
         text-align: center;
     }
 
@@ -92,7 +92,7 @@ body {
  Media Queries
 ===================================================================*/
 
-@media (min-width: 1000px), (min-height:665px) {
+@media (min-width: 1000px) and (min-height:634px) {
 
     .main-nav li {
         padding-bottom: 1.5em;

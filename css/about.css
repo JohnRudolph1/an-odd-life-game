@@ -47,32 +47,17 @@ body {
     .main-nav li {
         display: flex;
         flex-direction: column;
-        margin-bottom: 25%;
+        
     }
 
-    
-
-    .background-color {
-        background-color: rgba(182, 187, 197, 0.7);
-        border: 2px solid black;
-        margin-bottom: 4%;
-    }
-
-    .jumbotext {
-        text-align: center;
-        color: black;
-        opacity: auto;
-        }
-
-    .jumbotext p {
-        font-size: 32px;
-    }
 
     .fab {
-      
-        display: block;
+        position: fixed;
         text-align: center;
-    
+        width:100px; 
+        left:50%; 
+        margin-left:-50px;
+        bottom: 10%;
     }   
 
  
@@ -96,7 +81,6 @@ body {
         background-color: burlywood;
         color: white;
         text-align: center;
-        font-size: 2em;
     }
 
 
@@ -109,17 +93,22 @@ body {
 @media (min-width: 1000px), (min-height:800px) {
 
     
-    .main-nav li {
-        display: inline-block;
-        text-align: center;
+        .main-nav li {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .main-nav li:nth-child(-n+2) {
+            padding-right: 30px;
+        }
+
+        .jumbotext {
+            margin: 0% 25% 0% 25%;
+        }
+        #stickyfooter {
+            font-size: 2em;
+        }
+
     }
 
-    .main-nav li:nth-child(-n+2) {
-        padding-right: 30px;
-    }
-
-    .jumbotext {
-        margin: 0% 25% 0% 25%;
-    }
-    }
-
+    
