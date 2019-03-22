@@ -335,3 +335,18 @@ $('#continueButtonS1').click(function () {
                         })
                     })
                 })
+            //b2-b3-e1
+            $('#b2-q1-button3').click(function (){
+                $('#b2-q1').fadeOut(500, function (){
+                    $('#b2-b3-e1').fadeIn(500, function (){
+                        $('#b2-b3-e1').show();
+                    })
+                })
+            })
+            $('#restart11').click(function (){
+                $('#b2-b3-e1').fadeOut(function (){
+                    $('#mb-s1').fadeIn(1500, function (){
+                        $('#mb-s1').show();
+                    })
+                })
+            })
