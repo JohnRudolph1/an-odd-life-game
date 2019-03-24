@@ -350,3 +350,54 @@ $('#continueButtonS1').click(function () {
                     })
                 })
             })
+            /************************************* Template for progressing story board ******************************************
+    $('#').click(function (){
+        $('#').fadeOut(500, function (){
+            $('#').fadeIn(500, function (){
+                $('#').show();
+            })
+        })
+    })
+    */
+    //Branch 3
+    //b3-s1
+    $('#b3-button').click(function (){
+        $('#mb-q1').fadeOut(500, function (){
+            $('#b3-s1').fadeIn(500, function (){
+                $('#b3-s1').show();
+            })
+        })
+    })
+    //b3-q1
+    $('#b3-s1-button1').click(function (){
+        $('#b3-s1').fadeOut(500, function (){
+            $('#b3-q1').fadeIn(500, function (){
+                $('#b3-q1').show();
+            })
+        })
+    })
+        //b3-b1-e1
+        $('#b3-q1-button1').click(function (){
+            $('#b3-q1').fadeOut(500, function (){
+                $('#b3-b1-e1').fadeIn(500, function (){
+                    $('#b3-b1-e1').show();
+                })
+            })
+        })
+        $('#restart12').click(function (){
+            $('#b3-b1-e1').fadeOut(500, function (){
+                $('#mb-q1').fadeIn(500, function (){
+                    $('#mbq1').show();
+                })
+            })
+        })
+        //b3-b2 tranfer mb-s1
+        $('#b3-q1-button2').click(function (){
+            $('#b3-q1').fadeOut(500, function (){
+                $('#mb-q1').fadeIn(500, function (){
+                    $('#mb-q1').show();
+                })
+            })
+        })
+
+        
