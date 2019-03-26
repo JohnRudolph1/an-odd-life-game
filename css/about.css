@@ -28,6 +28,8 @@ body {
       padding: 0;
   }
 
+ 
+
 /*=================================================================
  Class Selectors
 ===================================================================*/
@@ -51,15 +53,6 @@ body {
     }
 
 
-    .fab {
-        position: fixed;
-        text-align: center;
-        width:100px; 
-        left:50%; 
-        margin-left:-50px;
-        bottom: 10%;
-    }   
-
  
 /*=================================================================
  ID Selectors
@@ -82,8 +75,13 @@ body {
         color: white;
         text-align: center;
     }
-
-
+    
+    #main-text {
+        
+        font-family: 'Germania One', cursive;
+        text-align: center;
+        padding: 20px;
+    }
 /*=================================================================
  Media Queries
 ===================================================================*/
