@@ -399,5 +399,68 @@ $('#continueButtonS1').click(function () {
                 })
             })
         })
-
-        
+/************************************* Template for progressing story board ******************************************
+    $('#').click(function (){
+        $('#').fadeOut(500, function (){
+            $('#').fadeIn(500, function (){
+                $('#').show();
+            })
+        })
+    })
+    */
+        //Branch Four
+        $('#b4-button').click(function (){
+            $('#mb-q1').fadeOut(500, function (){
+                $('#b4-q1').fadeIn(500, function (){
+                    $('#b4-q1').show();
+                })
+            })
+        })
+            //b4-b1-q1
+            $('#b4-button1').click(function (){
+                $('#b4-q1').fadeOut(500, function (){
+                    $('#b4-b1-q1').fadeIn(500, function (){
+                        $('#b4-b1-q1').show();
+                    })
+                })
+            })
+            //b4-b1-e1
+            $('#b4-q1-button1').click(function (){
+                $('#b4-b1-q1').fadeOut(500, function (){
+                    $('#b4-b1-e1').fadeIn(500, function (){
+                        $('#b4-b1-e1').show();
+                    })
+                })
+            })
+            //restart
+            $('#restart13').click(function (){
+                $('#b4-b1-e1').fadeOut(500, function (){
+                    $('#mb-s1').fadeIn(500, function (){
+                        $('#mb-s1').show();
+                    })
+                })
+            })
+            //b4-b1-b2
+            $('#b4-q1-button2').click(function (){
+                $('#b4-b1-q1').fadeOut(500, function (){
+                    $('#b4-b2-e1').fadeIn(500, function (){
+                        $('#b4-b2-e1').show();
+                    })
+                })
+            })
+             //b4-b2-e1
+             $('#b4-button2').click(function (){
+                $('#b4-q1').fadeOut(500, function (){
+                    $('#b4-b2-e1').fadeIn(500, function (){
+                        $('#b4-b2-e1').show();
+                    })
+                })
+            })
+             $('#restart14').click(function (){
+                $('#b4-b2-e1').fadeOut(500, function (){
+                    $('#mb-s1').fadeIn(500, function (){
+                        $('#mb-s1').show();
+                    })
+                })
+            })
+            
