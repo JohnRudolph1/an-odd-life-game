@@ -43,7 +43,7 @@
         text-align: center;
         font-size: 2em;
         font-family: 'ZCOOL QingKe HuangYou', cursive;
-        margin-bottom: 5%;
+        margin-bottom: 20%;
     }
 
     .main-nav a{
@@ -107,7 +107,7 @@
 
 
  /* Larger Devices  */
-@media (min-width: 885px), (min-height:665px) {
+@media (min-width: 885px), (min-height:813px) {
     
     .main-nav li {
         display: inline-block;
@@ -119,11 +119,14 @@
     }
 
     .jumbotext {
-        margin: 0% 25% 0% 25%;
+        margin: 0% 10% 0% 10%;
     }
 
     .jumbotext p {
         font-size: 32px;
+    }
+    .main-nav {
+        margin-bottom: 5%;
     }
 }
 

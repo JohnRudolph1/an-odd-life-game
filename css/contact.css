@@ -81,6 +81,10 @@ body {
         padding-bottom: 20%;    
     }
 
+    #form-wrap {
+        width: 50%;
+        text-align: center
+    }
 
 /*=================================================================
  Media Queries
