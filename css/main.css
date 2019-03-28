@@ -59,13 +59,9 @@ body {
     }
 
     .fab {
-        position: fixed;
+        display: block;
         text-align: center;
-        width:100px; 
-        left:50%; 
-        margin-left:-50px;
-        bottom: 10%;
-        padding-top: 10%;
+        margin-bottom: 20px;
     }   
 /*=================================================================
  ID Selectors
