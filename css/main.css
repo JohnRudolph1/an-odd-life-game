@@ -61,7 +61,7 @@ body {
     .fab {
         display: block;
         text-align: center;
-        margin-bottom: 20px;
+        padding-bottom: 60px;
     }   
 /*=================================================================
  ID Selectors
