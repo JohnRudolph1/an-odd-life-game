@@ -89,7 +89,7 @@ body {
  Media Queries
 ===================================================================*/
 
-@media (min-width: 1000px) and (min-height:634px) {
+@media (min-width: 1000px), (min-height:634px) {
 
     .main-nav li {
         padding-bottom: 1.5em;
