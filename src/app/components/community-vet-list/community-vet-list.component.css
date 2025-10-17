@@ -1,0 +1,6 @@
+/* FILE: src/app/components/community-vet-list/community-vet-list.component.css */
+/* Dependencies: Styles community vet listing cards; used by component template. */
+
+.result-card {
+  margin-bottom: 16px;
+}

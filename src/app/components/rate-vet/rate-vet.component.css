@@ -1,0 +1,11 @@
+/* FILE: src/app/components/rate-vet/rate-vet.component.css */
+/* Dependencies: Styles rate vet form; associated with RateVetComponent template. */
+
+.form-card {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+button + a {
+  margin-left: 12px;
+}

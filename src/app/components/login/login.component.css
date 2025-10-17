@@ -1,0 +1,11 @@
+/* FILE: src/app/components/login/login.component.css */
+/* Dependencies: Styles login card; tied to LoginComponent template. */
+
+.auth-card {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+button + a {
+  margin-left: 12px;
+}

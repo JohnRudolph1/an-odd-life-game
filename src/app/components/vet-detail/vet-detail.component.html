@@ -1,0 +1,69 @@
+<!-- FILE: src/app/components/vet-detail/vet-detail.component.html -->
+<!-- Dependencies: Presents combined Yelp and community details; tied to VetDetailComponent logic. -->
+
+<section *ngIf="loading" class="center-text">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</section>
+
+<section *ngIf="!loading && errorMessage" class="center-text">
+  <p>{{ errorMessage }}</p>
+  <a mat-stroked-button color="primary" [routerLink]="['/vets', (vet?.id || yelpBusiness?.id) ?? '']" *ngIf="yelpBusiness">
+    Refresh
+  </a>
+</section>
+
+<section *ngIf="!loading">
+  <mat-card *ngIf="yelpBusiness" class="detail-card">
+    <mat-card-header>
+      <mat-card-title>{{ yelpBusiness.name }}</mat-card-title>
+      <mat-card-subtitle>
+        Rating: {{ yelpBusiness.rating }} ⭐ ({{ yelpBusiness.review_count }} reviews)
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ yelpBusiness.location.display_address.join(', ') }}</p>
+      <p *ngIf="yelpBusiness.display_phone">Phone: {{ yelpBusiness.display_phone }}</p>
+      <p>Price tier: {{ yelpBusiness.price || 'Unknown' }}</p>
+      <p>Distance: {{ (yelpBusiness.distance / 1609.34) | number : '1.1-1' }} miles</p>
+      <mat-chip-set aria-label="Categories">
+        <mat-chip *ngFor="let category of yelpBusiness.categories">{{ category.title }}</mat-chip>
+      </mat-chip-set>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card *ngIf="vet" class="detail-card">
+    <mat-card-header>
+      <mat-card-title>Community insights</mat-card-title>
+      <mat-card-subtitle>
+        Average rating: {{ getAverageRating() | number : '1.1-1' }} ⭐ ({{ vet.ratings.length }} ratings)
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Address: {{ vet.address }}</p>
+      <p *ngIf="vet.phone">Phone: {{ vet.phone }}</p>
+
+      <h3>Service pricing</h3>
+      <table mat-table [dataSource]="vet.services" class="mat-elevation-z1 full-width">
+        <ng-container matColumnDef="service">
+          <th mat-header-cell *matHeaderCellDef>Service</th>
+          <td mat-cell *matCellDef="let service">{{ service.serviceName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef>Price</th>
+          <td mat-cell *matCellDef="let service">${{ service.price | number : '1.2-2' }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['service', 'price']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['service', 'price']"></tr>
+      </table>
+      <p *ngIf="!vet.services.length" class="center-text">
+        No prices yet. <a [routerLink]="['/vets', vet.id, 'add-price']">Add a price</a>
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-stroked-button color="primary" [routerLink]="['/vets', vet.id, 'add-price']">Add price</a>
+      <a mat-raised-button color="accent" [routerLink]="['/vets', vet.id, 'rate']">Rate vet</a>
+    </mat-card-actions>
+  </mat-card>
+</section>

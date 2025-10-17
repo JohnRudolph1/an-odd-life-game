@@ -1,0 +1,56 @@
+<!-- FILE: src/app/components/yelp-vet-list/yelp-vet-list.component.html -->
+<!-- Dependencies: Binds to YelpVetListComponent form and list data; uses Angular Material form fields and cards. -->
+
+<section class="search-panel">
+  <form [formGroup]="form" (ngSubmit)="search()" class="search-form">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Location</mat-label>
+      <input matInput formControlName="location" placeholder="Boston, MA or 02118" />
+      <mat-error *ngIf="form.controls.location.touched && form.controls.location.invalid">
+        A location is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Sort by</mat-label>
+      <mat-select formControlName="sortBy">
+        <mat-option *ngFor="let option of sortOptions" [value]="option.value">
+          {{ option.label }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Search</button>
+  </form>
+</section>
+
+<section *ngIf="loading" class="center-text">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</section>
+
+<section *ngIf="!loading && errorMessage" class="center-text">
+  <p>{{ errorMessage }}</p>
+</section>
+
+<section *ngIf="!loading && !errorMessage">
+  <mat-card *ngFor="let vet of results; trackBy: trackByVet" class="result-card">
+    <mat-card-header>
+      <mat-card-title>{{ vet.name }}</mat-card-title>
+      <mat-card-subtitle>
+        <span>Rating: {{ vet.rating }} ⭐ ({{ vet.review_count }} reviews)</span>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ vet.location.display_address.join(', ') }}</p>
+      <p>Distance: {{ (vet.distance / 1609.34) | number : '1.1-1' }} miles</p>
+      <p>Price tier: {{ vet.price || 'Unknown' }}</p>
+      <mat-chip-set aria-label="Categories">
+        <mat-chip *ngFor="let category of vet.categories">{{ category.title }}</mat-chip>
+      </mat-chip-set>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button color="primary" [href]="vet.url" target="_blank" rel="noopener">View on Yelp</a>
+      <a mat-stroked-button color="accent" [routerLink]="['/vets', vet.id]">View details</a>
+    </mat-card-actions>
+  </mat-card>
+</section>

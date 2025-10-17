@@ -1,0 +1,34 @@
+/* FILE: src/app/layout/main-layout/main-layout.component.css */
+/* Dependencies: Styles for MainLayoutComponent template; ensures responsive toolbar and content spacing. */
+
+.layout-container {
+  height: 100vh;
+}
+
+.layout-sidenav {
+  width: 240px;
+}
+
+.layout-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.toolbar-title {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.layout-content {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+}
+
+.toolbar-toggle {
+  margin-right: 12px;
+}

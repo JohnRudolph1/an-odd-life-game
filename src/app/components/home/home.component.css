@@ -1,0 +1,12 @@
+/* FILE: src/app/components/home/home.component.css */
+/* Dependencies: Styles hero presentation; consumed by home.component.ts template. */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.hero-card {
+  max-width: 640px;
+}

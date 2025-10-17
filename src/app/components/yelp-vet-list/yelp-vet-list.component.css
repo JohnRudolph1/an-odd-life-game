@@ -1,0 +1,17 @@
+/* FILE: src/app/components/yelp-vet-list/yelp-vet-list.component.css */
+/* Dependencies: Styles search form and results list; tied to YelpVetListComponent template. */
+
+.search-panel {
+  margin-bottom: 24px;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.result-card {
+  margin-bottom: 16px;
+}

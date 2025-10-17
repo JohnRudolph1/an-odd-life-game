@@ -1,0 +1,27 @@
+<!-- FILE: src/app/components/community-vet-list/community-vet-list.component.html -->
+<!-- Dependencies: Displays community vets via Angular Material cards; bound to CommunityVetListComponent. -->
+
+<section *ngIf="loading" class="center-text">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</section>
+
+<section *ngIf="!loading && errorMessage" class="center-text">
+  <p>{{ errorMessage }}</p>
+</section>
+
+<section *ngIf="!loading && !errorMessage">
+  <mat-card *ngFor="let vet of vets; trackBy: trackByVet" class="result-card">
+    <mat-card-header>
+      <mat-card-title>{{ vet.name }}</mat-card-title>
+      <mat-card-subtitle>Average rating: {{ vet.averageRating | number : '1.1-1' }} ⭐</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ vet.address }}</p>
+      <p *ngIf="vet.phone">Phone: {{ vet.phone }}</p>
+      <p>Services contributed: {{ vet.services.length }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-stroked-button color="accent" [routerLink]="['/vets', vet.id]">View details</a>
+    </mat-card-actions>
+  </mat-card>
+</section>
