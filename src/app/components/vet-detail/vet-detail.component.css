@@ -1,0 +1,15 @@
+/* FILE: src/app/components/vet-detail/vet-detail.component.css */
+/* Dependencies: Styles vet detail cards and tables; applied to VetDetailComponent template. */
+
+.detail-card {
+  margin-bottom: 24px;
+}
+
+table {
+  margin-top: 16px;
+}
+
+mat-card-actions {
+  display: flex;
+  gap: 12px;
+}

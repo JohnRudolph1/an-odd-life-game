@@ -1,0 +1,11 @@
+/* FILE: src/app/components/add-price/add-price.component.css */
+/* Dependencies: Styles add-price form; tied to AddPriceComponent template. */
+
+.form-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+button + a {
+  margin-left: 12px;
+}

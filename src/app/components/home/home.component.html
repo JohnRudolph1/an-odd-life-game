@@ -1,0 +1,21 @@
+<!-- FILE: src/app/components/home/home.component.html -->
+<!-- Dependencies: Uses Angular Material cards and routerLink; bound to HomeComponent. -->
+
+<section class="hero">
+  <mat-card class="hero-card">
+    <mat-card-header>
+      <mat-card-title>TransparentSee</mat-card-title>
+      <mat-card-subtitle>Know what you will pay before you visit your vet.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Search nearby veterinarians, compare ratings, and contribute transparent pricing for
+        common pet services. Together we build a trustworthy community resource.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button color="primary" routerLink="/yelp-vets">Find vets near me</a>
+      <a mat-stroked-button color="accent" routerLink="/vets">Explore community data</a>
+    </mat-card-actions>
+  </mat-card>
+</section>

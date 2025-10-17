@@ -1,0 +1,11 @@
+/* FILE: src/app/components/signup/signup.component.css */
+/* Dependencies: Styles signup card; bound to SignupComponent template. */
+
+.auth-card {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+button + a {
+  margin-left: 12px;
+}

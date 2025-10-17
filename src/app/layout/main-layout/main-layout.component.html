@@ -1,0 +1,48 @@
+<!-- FILE: src/app/layout/main-layout/main-layout.component.html -->
+<!-- Dependencies: Uses Angular Material layout components; bound to MainLayoutComponent logic for navigation and auth state. -->
+
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav [mode]="'side'" [opened]="sidenavOpened" class="layout-sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" (click)="toggleSidenav()">Home</a>
+      <a mat-list-item routerLink="/yelp-vets" (click)="toggleSidenav()">Find vets on Yelp</a>
+      <a mat-list-item routerLink="/vets" (click)="toggleSidenav()">Community vets</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="layout-toolbar">
+      <button
+        mat-icon-button
+        type="button"
+        aria-label="Toggle navigation"
+        (click)="toggleSidenav()"
+        class="toolbar-toggle"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="toolbar-title" routerLink="/">TransparentSee</span>
+      <span class="spacer"></span>
+      <ng-container *ngIf="user$ | async as user; else loggedOut">
+        <button mat-button [matMenuTriggerFor]="userMenu">
+          <mat-icon>account_circle</mat-icon>
+          {{ user.email || 'Account' }}
+        </button>
+        <mat-menu #userMenu="matMenu">
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+      </ng-container>
+      <ng-template #loggedOut>
+        <a mat-button routerLink="/login">Login</a>
+        <a mat-stroked-button color="accent" routerLink="/signup">Sign up</a>
+      </ng-template>
+    </mat-toolbar>
+
+    <main class="layout-content">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

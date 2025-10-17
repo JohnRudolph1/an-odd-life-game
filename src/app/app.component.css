@@ -1,0 +1,7 @@
+/* FILE: src/app/app.component.css */
+/* Dependencies: Styling for AppComponent host; referenced by app.component.ts. */
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
