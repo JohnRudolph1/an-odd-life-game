@@ -1,18 +1,8 @@
-# FILE: .gitignore
-# Dependencies: Standard ignore list for Node/Angular projects.
-
-/node_modules
-/dist
-/.angular/cache
-/.env
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-server/node_modules
-server/.env
-
-# IDEs
-.vscode
-.idea
-.DS_Store
+node_modules
+**/node_modules
+.env
+.firebase
+apps/web/dist
+functions/lib
+playwright-report
+test-results

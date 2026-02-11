@@ -1,151 +1,81 @@
-# TransparentSee Vet Rating App
+# Seat Swap App
 
-TransparentSee is an Angular 20 application paired with a lightweight Express backend proxy. It helps pet parents compare veterinarians, view community-sourced pricing, and rate their experiences without exposing private API keys.
+Production-ready Firebase + React application for seat moves and swaps on commercial flights.
 
-## Prerequisites
+## Stack
+- React + TypeScript + Vite
+- Tailwind + shadcn style primitives
+- Firebase Auth, Firestore, Cloud Functions, Hosting
+- TanStack Query + React Hook Form + Zod
+- Vitest + Playwright + Storybook
 
-- Node.js **22.18.0**
-- npm **10.9.3**
-- Angular CLI **20.1.5** (`npm install -g @angular/cli@20.1.5`)
+## Repository Layout
+- `apps/web`: frontend SPA
+- `functions`: Cloud Functions and seed script
+- `stories`: Storybook stories
+- Root Firebase config and security rules
 
-## Project structure
-
-```
-/README.md            → setup guide and dependency map
-/angular.json         → Angular CLI configuration
-/package.json         → Frontend dependencies & scripts
-/src/                 → Angular application source
-/server/              → Express proxy + community JSON data API
-```
-
-## Installation & setup
-
-1. **Backend dependencies**
+## Setup
+1. Install dependencies:
    ```bash
-   cd server
-   npm install
-   cp .env.sample .env
-   # edit .env and set YELP_API_KEY=your_yelp_api_key
-   ```
-
-2. **Frontend dependencies**
-   ```bash
-   cd ..
    npm install
    ```
+2. Copy env:
+   ```bash
+   cp .env.example .env
+   ```
+3. Fill Firebase web SDK keys and `AVIATIONSTACK_API_KEY`.
 
-3. **Firebase configuration**
-
-   Edit `src/environments/environment.ts` and `environment.prod.ts` with your Firebase Email/Password project values:
-
-   ```ts
-   export const environment = {
-     production: false,
-     firebase: {
-       apiKey: 'YOUR_KEY',
-       authDomain: 'YOUR_DOMAIN',
-       projectId: 'YOUR_PROJECT_ID',
-       storageBucket: 'YOUR_BUCKET',
-       messagingSenderId: 'YOUR_SENDER',
-       appId: 'YOUR_APP_ID',
-     },
-     apiBaseUrl: 'http://localhost:3000/api',
-   };
+## Firebase Project Setup
+1. Create Firebase project.
+2. Enable Authentication providers: Email/Password and Google.
+3. Create Firestore in production mode.
+4. Deploy rules and indexes:
+   ```bash
+   firebase deploy --only firestore
    ```
 
-## Running the apps
-
-Open **two terminals** (Windows users can use separate PowerShell instances).
-
-### Terminal 1 – backend API
-
+## Emulators
 ```bash
-cd server
-npm run server
+npm run emulators
 ```
 
-- Loads environment variables from `.env`
-- Proxies Yelp requests safely and serves the community data API on `http://localhost:3000`
-
-### Terminal 2 – Angular frontend
-
+## Seed Data
 ```bash
-# from the project root
-npm start
+npm run seed
+```
+Creates admin/demo users, default template, a demo flight, seats, and initial assignments.
+
+## Development
+```bash
+npm run dev
 ```
 
-- Serves the Angular app at `http://localhost:4200`
-- The CLI automatically reconnects to the backend at `http://localhost:3000/api`
-
-### Combined helper script
-
-From the project root you can run:
-
+## Testing
 ```bash
-npm run dev:all
+npm run test
+npm run test:e2e
 ```
 
-This prints a reminder to start the backend and frontend in two terminals.
-
-## Proxy endpoints
-
-The Express API exposes safe proxy routes to hide the Yelp API key:
-
-- `GET /api/yelp/search?location=<city or zip>&sort_by=<best_match|rating|review_count|distance>`
-- `GET /api/yelp/business/:id`
-
-Community data routes (persisted in `server/data/db.json`):
-
-- `GET /api/vets`
-- `GET /api/vets/:id`
-- `POST /api/vets` – create manual vet entries (name + address required)
-- `POST /api/vets/:id/services` – body `{ serviceName: string; price: number }`
-- `POST /api/vets/:id/ratings` – body `{ rating: number }`
-
-## Troubleshooting
-
-| Issue | Fix |
-| ----- | --- |
-| **CORS errors in the browser** | Confirm the backend is running on `http://localhost:3000` and the `.env` file is present. |
-| **`FirebaseError: Firebase: Error (auth/... )`** | Ensure Firebase Email/Password sign-in is enabled and the environment files contain valid keys. |
-| **`ng` command not found** | Install the Angular CLI globally: `npm install -g @angular/cli@20.1.5`. |
-| **`NG0100: Expression has changed` warnings** | Make sure forms import `FormsModule` (already configured in `AppModule`). |
-| **`mat-*` components not recognized`** | Verify `MaterialModule` exports include the needed Angular Material component (e.g., add `MatTableModule` for new tables). |
-| **`Cannot find module fs-extra/esm`** | Run `npm install` in the `server/` folder to pull in backend dependencies. |
-
-## Dependency map (change impact matrix)
-
-The following cross-file relationships are critical when refactoring:
-
-- **Routing changes** – Updating routes in `src/app/app-routing.module.ts` must stay in sync with navigation links in:
-  - `src/app/layout/main-layout/main-layout.component.html`
-  - `README.md` run instructions for available pages
-- **Yelp data contracts** – Editing interfaces in `src/app/models/yelp.models.ts` requires updates to:
-  - `src/app/services/yelp.service.ts`
-  - `src/app/components/yelp-vet-list/yelp-vet-list.component.ts`
-  - `src/app/components/vet-detail/vet-detail.component.ts`
-- **Community vet schema** – Changes in `src/app/models/vet.models.ts` propagate to:
-  - `src/app/services/vet.service.ts`
-  - Backend helpers in `server/utils/db.js`
-  - Express routes in `server/routes/vets.js`
-  - UI components (`community-vet-list`, `vet-detail`, `add-price`, `rate-vet`)
-- **Auth service API** – Renaming methods in `src/app/services/auth.service.ts` requires touching:
-  - `src/app/guards/auth.guard.ts`
-  - `src/app/layout/main-layout/main-layout.component.ts`
-  - Auth components (`login`, `signup`)
-- **Material module exports** – Any new Angular Material component usage must be reflected in `src/app/shared/material.module.ts` to avoid missing module errors.
-
-## How to run
-
+## Deployment
 ```bash
-# Terminal 1 (server)
-cd server
-npm i
-cp .env.sample .env   # then put YELP_API_KEY=...
-npm run server
-
-# Terminal 2 (frontend)
-# open a new terminal at the project root
-npm i
-ng serve -o
+npm run build
+firebase deploy
 ```
+
+## Architecture Overview
+- `searchFlightAndUpsert` calls aviationstack free API and caches normalized flight metadata in `/flights/{flightId}`.
+- If API fails or rate limit is hit, function falls back to cached flight record.
+- Seats and assignments live only in Firestore and are mutated via transactional callable functions.
+- Frontend reads seat docs in real-time and sends seat actions only through callable functions.
+
+## Cache + Rate Limit Behavior
+- First search of a flight writes source payload into Firestore cache.
+- Subsequent searches reuse cached metadata if API returns errors.
+- Users are linked to searched flights at `/users/{uid}/myFlights/{flightId}`.
+
+## Security Model
+- Auth required for reads.
+- Passengers cannot directly write seats/assignments/swap docs.
+- Admin-only creation/assignment/generation callable functions.
+- Access to flight docs is constrained by user-flight linkage.
