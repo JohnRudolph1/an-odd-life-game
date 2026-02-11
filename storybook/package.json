@@ -1,0 +1,11 @@
+{
+  "name": "@seat-swap/storybook",
+  "private": true,
+  "scripts": {
+    "storybook": "storybook dev -p 6006"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "^8.2.8",
+    "storybook": "^8.2.8"
+  }
+}
